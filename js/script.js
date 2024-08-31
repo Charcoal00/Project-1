@@ -56,7 +56,7 @@ async function checkWeather(city) {
     document.querySelector(".wind-3").innerHTML = data.wind.speed + "km/h";
     document.querySelector(".city-weather").innerHTML = ddata.weather[0].main;
     document.querySelector(".city-weather-2").innerHTML =
-      ddata.weather[0].description;
+      data.weather[0].description;
 
     if (data.weather[0].main == "Clouds") {
       weatherIcon.src = "./image/cloudy.svg";
