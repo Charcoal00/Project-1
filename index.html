@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+
+    <!-- style  -->
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <!-- icon  -->
+    <link rel="icon" href="" type="image/x-icon" />
+
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Roboto+Slab:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="card">
+      <div class="loader">
+        <div class="spinner"></div>
+        <h2 id="loaderTxt">enter your city name in the search box...</h2>
+      </div>
+
+      <button id="moreInfo" class="btnn aaa">
+        <span class="icon-info"></span>
+      </button>
+      <div id="default" class="rty">
+        <span><img src="./image/code-yellow.svg" alt="" /></span>
+        <p>Invalid City name</p>
+      </div>
+      <button id="toggleBtn" class="btnn bbb">
+        <div class="ccb">
+          <div class="kkx">
+            <span class="tc s1"></span>
+            <span class="tc s2"></span>
+            <span class="tc s3"></span>
+            <span class="tc s4"></span>
+            <span class="tc s5"></span>
+            <span class="tc s6"></span>
+            <span class="tc s7"></span>
+            <span class="tc s8"></span>
+            <div class="ddx">
+              <div class="moon"></div>
+            </div>
+          </div>
+        </div>
+      </button>
+      <div class="containers aa">
+        <div class="weather-main">
+          <div class="search-box box">
+            <input type="text" placeholder="Enter City Name" />
+            <button class="ggf">
+              <span class="icon-search nnn"></span>
+            </button>
+          </div>
+          <div class="City-name box">
+            <h2 class="city">Belgium</h2>
+            <p class="city-weather">Sunny</p>
+            <p class="city-weather-2">partly sunny</p>
+          </div>
+          <div class="weather-icon box">
+            <span
+              ><img class="weather-1" src="./image/clear-day.svg" alt=""
+            /></span>
+          </div>
+          <div class="temp box">
+            <h1 class="temp-3">22°c</h1>
+          </div>
+          <div class="weather-brief box">
+            <div class="wind">
+              <span><img src="./image/wind.svg" alt="" /></span>
+              <p>Wind</p>
+              <h3 class="wind-2">4km/h</h3>
+            </div>
+            <div class="temp-2">
+              <span><img src="./image/humidity.svg" alt="" /></span>
+              <p>humidity</p>
+              <h3 class="humidity">48%</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="containers bb">
+        <button id="close">
+          <span class="close-btn"></span>
+        </button>
+        <div class="weather-info">
+          <div class="column-1">
+            <div class="inn b2222">
+              <span><img src="./image/tide-high.svg" alt="" /></span>
+              <p>sea level</p>
+              <h3 class="sea">20m</h3>
+            </div>
+            <div class="inn c3333">
+              <span><img src="./image/thermometer.svg" alt="" /></span>
+              <p>temprature</p>
+              <h3 class="temp4">30°c</h3>
+            </div>
+            <div class="inn d4444">
+              <span><img src="./image/pressure-high.svg" alt="" /></span>
+              <p>pressure</p>
+              <h3 class="pressure">1.22hPa</h3>
+            </div>
+          </div>
+          <div class="column-2">
+            <div class="inn a1111">
+              <span><img src="./image/humidity.svg" alt="" /></span>
+              <p>humidity</p>
+              <h3 class="humidity">40%</h3>
+            </div>
+            <div class="inn b2222">
+              <span><img src="./image/umbrella-wind.svg" alt="" /></span>
+              <p>wind direction</p>
+              <h3 class="deg">223°</h3>
+            </div>
+            <div class="inn c3333">
+              <span><img src="./image/wind.svg" alt="" /></span>
+              <p>wind speed</p>
+              <h3 class="wind-3">40km/h</h3>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+
+  <script>
+    document
+      .querySelector(".search-box input")
+      .addEventListener("focus", () => {
+        document.querySelector(".ggf").classList.add("yuy");
+      });
+    document.querySelector(".search-box input").addEventListener("blur", () => {
+      document.querySelector(".ggf").classList.remove("yuy");
+    });
+
+    const aa = document.querySelector(".aa");
+    const bb = document.querySelector(".bb");
+    const infoo = document.getElementById("moreInfo");
+    const infox = document.getElementById("close");
+    infoo.addEventListener("click", () => {
+      infoo.classList.toggle("open");
+      bb.classList.toggle("open-info");
+      aa.classList.toggle("close-main");
+      infox.classList.toggle("uil");
+    });
+    infox.addEventListener("click", () => {
+      infoo.classList.toggle("open");
+      bb.classList.toggle("open-info");
+      aa.classList.toggle("close-main");
+      infox.classList.toggle("uil");
+    });
+  </script>
+  <script src="./js/script.js"></script>
+</html>
