@@ -29,35 +29,31 @@ searchBtn.addEventListener("click", () => {
 
 
   async function checkWeather(city) {
-    const response = await fetch(apiUrl + city + "&appid=" + apiKey);
+    const response = await fetch(apiUrl + city + '&appid='+ apiKey);
 
     if (response.status == 404) {
       infoo.style.visibility = "hidden";
       document.getElementById("default").classList.add("lll");
     } else {
-      infoo.style.visibility = "visible";
       var data = await response.json();
+      infoo.style.visibility = "visible";
       infoo.classList.remove("open");
       document.getElementById("default").classList.remove("lll");
 
-      document.querySelector(".city").innerHTML = data.name;
-      document.querySelector(".temp-3").innerHTML =
-        Math.round(data.main.temp) + "°c";
+      document.querySelector(".city").innerHTML = searchBox.value;
+      document.querySelector(".temp-3").innerHTML = Math.round(data.main.temp) + "°c";
       document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
-      document.querySelector(".wind-2").innerHTML =
-        Math.round(data.wind.speed) + "km/h";
+      document.querySelector(".wind-2").innerHTML = Math.round(data.wind.speed) + "km/h";
 
       // ../
       document.querySelector(".sea").innerHTML = data.main.sea_level + "m";
       document.querySelector(".temp4").innerHTML = data.main.temp + "°c";
-      document.querySelector(".pressure").innerHTML =
-        data.main.pressure + "hPa";
-      document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
+      document.querySelector(".pressure").innerHTML = data.main.pressure + "hPa";
+      document.querySelector(".humidity-2").innerHTML = data.main.humidity + "%";
       document.querySelector(".deg").innerHTML = data.wind.deg + "°";
       document.querySelector(".wind-3").innerHTML = data.wind.speed + "km/h";
       document.querySelector(".city-weather").innerHTML = data.weather[0].main;
-      document.querySelector(".city-weather-2").innerHTML =
-        data.weather[0].description;
+      document.querySelector(".city-weather-2").innerHTML = data.weather[0].description;
 
       if (data.weather[0].main == "Clouds") {
         weatherIcon.src = "./image/cloudy.svg";
