@@ -27,6 +27,7 @@ searchBtn.addEventListener("click", () => {
 
   spinner.classList.add("ggg");
 
+
   async function checkWeather(city) {
     const response = await fetch(apiUrl + city + "&appid=" + apiKey);
 
