@@ -22,9 +22,9 @@ Metric system.
 
 ## Colllaborators:
 
-Christopher Wise - [Code Savant]("https://").
+Christopher Wise - [Code Savant](https://github.com/Charcoal00).
 
 To view preview the website, visit the link below:
-Click here: [Weather app]("https://weathercheck-11.netlify.app/").
+Click here: [Weather app](https://weathercheck-11.netlify.app/).
 
 Don't forget to follow me and give the repo a star.
