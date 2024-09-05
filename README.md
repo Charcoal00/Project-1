@@ -8,7 +8,7 @@ Weather App☁️.
 
 A weather app designed to tell the current weather condition by fetching current weather data.
 
-### features include:
+### 🛠️ features include:
 
 1. Temprature
 2. Pressure
@@ -16,11 +16,11 @@ A weather app designed to tell the current weather condition by fetching current
 4. Humidity
 5. Sea level
 
-## Unit of measurement:
+## 📏 Unit of measurement:
 
 Metric system.
 
-## Colllaborators:
+## 👤 Colllaborators:
 
 Christopher Wise - [Code Savant](https://github.com/Charcoal00).
 
